@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function calc(type) {
+            let x = parseFloat(document.calculator.number1.value);
+            let y = parseFloat(document.calculator.number2.value);
+            if (type == 1)
+                z = x+y;
+            else if (type == 2)
+                z = x-y;
+            else if (type == 3)
+                z = x*y;
+            else if (type == 4)
+                    z= x/y;
+            else if (type == 5)
+                z= Math.pow(x,y);
+            document.calculator.total.value = z;
+        }
+        
+    </script>
+</head>
+
+<body>
+    <form name="calculator">
+        입력1:               <input type="text" name="number1"><br />
+        입력2:               <input type="text" name="number2"><br />
+        계산 결과:          <input type="text" name="total"><br />
+
+        <input type="button" value="SUM" onclick="calc(1);">
+        <input type="button" value="SUB" onclick="calc(2);">
+        <input type="button" value="MUL" onclick="calc(3);">
+        <input type="button" value="DIV" onclick="calc(4);">
+        <input type="button" value="POW" onclick="calc(5);">
+        
+
+    </form>
+
+</body>
+</html>
+
+</html>
