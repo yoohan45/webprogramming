@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table, td { border: 1px solid black;}
+    </style>
+    
+</head>
+<body>
+    <table id ="t">
+        <tr><td>(1,1)</td><td>(1,2)</td></tr>
+        <tr><td>(2,1)</td><td>(2,2)</td></tr>
+    </table>
+    <button onclick="insert()">추가</button>
+    <button onclick="removet()">제거</button>
+    <script>
+        let count=3;
+        function insert(){
+            let table = document.getElementById("t");
+            let row = table.insertRow(-1);
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            cell1.innerText = "("+count+",1)";
+            cell2.innerText = "("+count+",2)";
+            count++;
+
+        }
+
+        function removet(){
+            let table = document.getElementById("t");
+            let row = table.deleteRow(-1);
+            count--;
+        }
+    </script>
+    
+</body>
+</html>
